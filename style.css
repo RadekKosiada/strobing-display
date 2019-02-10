@@ -1,0 +1,39 @@
+/* body {
+  background-color: yellow;
+} */
+
+* {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h3 {
+ text-align: center;
+ text-transform: uppercase;
+ font-size: 7vw;
+ line-height: 0.25;
+}
+
+hr { 
+  color: black;
+}
+
+.on {
+  animation: raveOn 0.25s;
+  animation-iteration-count: 10;
+
+}
+
+@keyframes raveOn{
+  0%{
+    background-color: orange;
+  }
+  100%{
+    background-color: white;
+  }
+}
