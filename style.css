@@ -25,15 +25,61 @@ hr {
 
 .on {
   animation: raveOn 0.25s;
-  animation-iteration-count: 10;
+  animation-iteration-count: 11;
+  animation-timing-function: ease-in; 
+  background-color: yellow;
 
 }
 
 @keyframes raveOn{
   0%{
-    background-color: orange;
-  }
-  100%{
     background-color: white;
   }
+  25% {
+    background-color: red;
+  }
+  50% {
+    background-color: green;
+  }
+  75% {
+    background-color: blue;
+  }
+  100%{
+    background-color: yellow;
+  }
 }
+
+
+.strobo-effect {
+  animation: shakeIt 150ms;
+  animation-iteration-count: 8;
+  animation-timing-function: ease-in; 
+}
+
+@keyframes shakeIt {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+
+.strobo-container {
+  animation: stroboContainer 0.25s;
+  animation-timing-function: ease-out; 
+  animation-iteration-count: 11;
+
+}
+
+@keyframes stroboContainer {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+
