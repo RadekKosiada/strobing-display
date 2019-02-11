@@ -82,4 +82,54 @@ hr {
   }
 }
 
+.shrinking {
+  /* color: white; */
+  font-size: 0;
+  animation: shrinking-font 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  line-height: 1;
+}
+
+@keyframes shrinking-font {
+  0% {
+    font-size: 7vw;
+    /* line-height: 1; */
+
+  }
+  25%{
+    line-height: 0.75;
+
+  }
+  50% {
+    /* line-height: 0.75; */
+  }
+  75%{
+    line-height: 1;
+  }
+  100% {
+    font-size: 0;
+
+  }
+}
+
+.stretching {
+  font-size: 700vw;
+  animation: stretching 1.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+@keyframes stretching {
+  0% {
+    font-size: 1vw;
+  }
+  50% {
+    font-size: 350vw;
+  }
+  100% {
+    font-size: 700vw;
+  }
+
+}
 

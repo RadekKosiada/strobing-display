@@ -1,3 +1,4 @@
+
 var container = document.createElement("div");
 container.className = "container"
 document.body.appendChild(container);
@@ -91,7 +92,30 @@ setTimeout(makeInvisible.bind(null, thirdRow), typingSpeed*(secondText.length + 
 function changeBackground() {
   // document.body.style.backgroundColor = "yellow";
   document.body.className ="on";
-  // container.className = "container strobo-container";
+  container.className = "container strobo-container";
 }
 
 setTimeout(changeBackground, typingSpeed *(secondText.length + firstText.length+stroboDelay*4));
+
+
+function shrink() {
+
+  firstRow.className = "shrinking";
+  secondRow.className = "shrinking";
+  thirdRow.className = "shrinking";
+
+}
+
+setTimeout(shrink, typingSpeed * (secondText.length + firstText.length+stroboDelay*6));
+
+function addBigDot() {
+  firstRow.innerHTML = "";
+  secondRow.innerHTML = "&#9679";
+  secondRow.className = "stretching";
+  thirdRow.innerHTML = "";
+  document.body.style.overflow = "hidden";
+ 
+}
+
+setTimeout(addBigDot, typingSpeed * (secondText.length + firstText.length+stroboDelay*7.5));
+
